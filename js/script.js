@@ -48,7 +48,11 @@ const app = new Vue (
                 if (this.index === -1) {
                     this.index = this.slides.length - 1;
                 }
-            }
+            },
+        },
+
+        created() {
+            setInterval(this.nextSlide, 3000);
         }
     }
 )

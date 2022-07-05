@@ -40,6 +40,14 @@ const app = new Vue (
                 if (this.index > this.slides.length - 1) {
                     this.index = 0;
                 }
+            },
+
+            prevSlide() {
+                this.index--;
+
+                if (this.index === -1) {
+                    this.index = this.slides.length - 1;
+                }
             }
         }
     }
